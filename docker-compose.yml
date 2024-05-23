@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: postgres-sql-rent-me
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rent_me_db
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - network-rent-me
+    restart: unless-stopped
+
+  mail-dev:
+    container_name: mail-dev-rent-me
+    image: maildev/maildev
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+
+networks:
+  network-rent-me:
+    driver: bridge
+
+volumes:
+  postgres:
+    driver: local
