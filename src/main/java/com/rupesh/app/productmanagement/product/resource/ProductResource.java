@@ -5,6 +5,7 @@ import com.rupesh.app.productmanagement.product.model.ProductResponse;
 import com.rupesh.app.productmanagement.product.service.IProductService;
 import com.rupesh.app.util.GlobalResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,7 @@ public class ProductResource {
 
     @PostMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity<GlobalResponse<Void>> save(@RequestBody ProductRequest request) {
+    public ResponseEntity<GlobalResponse<Void>> save(@RequestBody @Valid ProductRequest request) {
 
         return ResponseEntity
                 .ok(productService.save(request)

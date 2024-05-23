@@ -9,10 +9,22 @@ public final class BookingMapper {
     private BookingMapper() {}
 
     public static Booking toEntity(BookingRequest request) {
-        return null;
+        return Booking
+                .builder()
+                .bookingDate(request.getBookingDate())
+                .returnDate(request.getReturnDate())
+                .productId(request.getProductId())
+                .build();
     }
 
     public static BookingResponse toResponse(Booking booking) {
-        return null;
+        return BookingResponse
+                .builder()
+                .id(booking.getId())
+                .bookingDate(booking.getBookingDate())
+                .returnDate(booking.getReturnDate())
+                .modifiedDate(booking.getLastModifiedDate())
+                .requestedDate(booking.getCreatedDate())
+                .build();
     }
 }

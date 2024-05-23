@@ -30,6 +30,8 @@ public class Booking {
 
     private Long userId;
     private Long productId;
+    private LocalDateTime bookingDate;
+    private LocalDateTime returnDate;
 
     @CreatedDate
     @Column(nullable = false, updatable = false)

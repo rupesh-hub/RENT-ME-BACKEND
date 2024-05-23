@@ -1,6 +1,6 @@
 package com.rupesh.app.productmanagement.product.entity;
 
-import com.rupesh.app.productmanagement.product.category.entity.Category;
+import com.rupesh.app.productmanagement.category.entity.Category;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;

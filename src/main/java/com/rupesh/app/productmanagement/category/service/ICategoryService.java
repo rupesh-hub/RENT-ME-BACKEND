@@ -1,7 +1,7 @@
-package com.rupesh.app.productmanagement.product.category.service;
+package com.rupesh.app.productmanagement.category.service;
 
-import com.rupesh.app.productmanagement.product.category.model.CategoryRequest;
-import com.rupesh.app.productmanagement.product.category.model.CategoryResponse;
+import com.rupesh.app.productmanagement.category.model.CategoryRequest;
+import com.rupesh.app.productmanagement.category.model.CategoryResponse;
 import com.rupesh.app.util.GlobalResponse;
 
 import java.util.List;

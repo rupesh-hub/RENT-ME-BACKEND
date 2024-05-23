@@ -1,8 +1,8 @@
-package com.rupesh.app.productmanagement.product.category.resource;
+package com.rupesh.app.productmanagement.category.resource;
 
-import com.rupesh.app.productmanagement.product.category.model.CategoryRequest;
-import com.rupesh.app.productmanagement.product.category.model.CategoryResponse;
-import com.rupesh.app.productmanagement.product.category.service.ICategoryService;
+import com.rupesh.app.productmanagement.category.model.CategoryRequest;
+import com.rupesh.app.productmanagement.category.model.CategoryResponse;
+import com.rupesh.app.productmanagement.category.service.ICategoryService;
 import com.rupesh.app.util.GlobalResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

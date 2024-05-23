@@ -1,4 +1,4 @@
-package com.rupesh.app.productmanagement.product.category.entity;
+package com.rupesh.app.productmanagement.category.entity;
 
 import com.rupesh.app.productmanagement.product.entity.Product;
 import jakarta.persistence.*;
@@ -33,7 +33,6 @@ public class Category {
 
     private String name;
     private String description;
-
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> products = new ArrayList<>();

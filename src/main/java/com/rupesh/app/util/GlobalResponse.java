@@ -1,6 +1,7 @@
 package com.rupesh.app.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.rupesh.app.productmanagement.product.model.Paging;
 import lombok.*;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class GlobalResponse<T> {
     private String error;
     private List<String> errors;
     private T data;
+    private Paging page;
 
     public static <T> GlobalResponse<T> success(T data) {
         return GlobalResponse.<T>builder()
@@ -26,6 +28,16 @@ public class GlobalResponse<T> {
                 .status("success")
                 .code("200")
                 .data(data)
+                .build();
+    }
+
+    public static <T> GlobalResponse<T> success(T data, Paging page) {
+        return GlobalResponse.<T>builder()
+                .message("success")
+                .status("success")
+                .code("200")
+                .data(data)
+                .page(page)
                 .build();
     }
 
