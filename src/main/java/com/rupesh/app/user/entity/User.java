@@ -35,7 +35,6 @@ public class User implements UserDetails, Principal {
     )
     private Long id;
 
-
     private String firstName;
     private String lastName;
 
