@@ -30,7 +30,6 @@ public class CustomSecurityConfiguration {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(
                                 "/authentication/**",
-                                "/booking/**",
                                 "/v2/api-docs",
                                 "/v3/api-docs",
                                 "/v3/api-docs/**",

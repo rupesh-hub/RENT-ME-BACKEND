@@ -43,13 +43,11 @@ public class ProductResource {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<GlobalResponse<List<ProductResponse>>> getAll(
-            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "page", defaultValue = "0") int page,
             @RequestParam(name = "size", defaultValue = "10") int size
     ) {
 
-        return ResponseEntity
-                .ok(productService.findAll(page, size)
-                );
+        return ResponseEntity.ok(productService.findAll(page, size));
     }
 
 

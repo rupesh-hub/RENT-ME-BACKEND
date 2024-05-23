@@ -9,7 +9,11 @@ public final class ReviewMapper {
     private ReviewMapper() {}
 
     public static Review toEntity(ReviewRequest request){
-        return null;
+       return Review
+                .builder()
+                .productId(request.getProductId())
+                .rating(request.getRating())
+                .build();
     }
 
     public static ReviewResponse toResponse(Review review){

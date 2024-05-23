@@ -23,6 +23,16 @@ services:
       - "1080:1080"
       - "1025:1025"
 
+  rent-api:
+    container_name: rent-api
+    image: rent/rent:1.0.0
+    ports:
+      - "8088:8088"
+    networks:
+      - network-rent-me
+    depends_on:
+      - postgres
+
 networks:
   network-rent-me:
     driver: bridge

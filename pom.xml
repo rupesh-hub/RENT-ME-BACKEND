@@ -122,7 +122,7 @@
             </plugin>
         </plugins>
 
-        <finalName>rent-me-prototype</finalName>
+        <finalName>rent-me-prototype-${version}</finalName>
     </build>
 
 </project>
