@@ -33,6 +33,16 @@ services:
     depends_on:
       - postgres
 
+  rent-ui:
+    container_name: rent-ui
+    image: rent/rent-ui:1.0.0
+    ports:
+      - "8081:8081"
+    networks:
+      - network-rent-me
+    depends_on:
+      - rent-api
+
 networks:
   network-rent-me:
     driver: bridge
